@@ -4,11 +4,13 @@ use std::collections::HashMap;
 
 fn main() {
     println!("Enter a sentence");
-    let mut test_sentence = String::new();
+    let mut input = String::new();
 
     io::stdin()
-        .read_line(&mut test_sentence)
+        .read_line(&mut input)
         .expect("Failed to read line");
+
+    let test_sentence : String = input.trim().to_lowercase();
 
     let mut letter_map:HashMap<char, u8> = HashMap::new();
     
